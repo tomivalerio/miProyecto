@@ -185,7 +185,14 @@ header {
 .container-grid .img-header img{
     width: 100%;
     margin: 0 auto;
+    animation:rotate-in-center 1s cubic-bezier(.25,.46,.45,.94) 1s 2 both;
 }
+
+@keyframes rotate-in-center{0%{transform:rotate(-360deg);opacity:0}100%{transform:rotate(0);opacity:1}}
+
+
+
+
 @media screen and  (max-width: 1000px){
     
     .container-grid {
@@ -270,9 +277,9 @@ label span{
     letter-spacing: 1.5px;
     padding: 50px 0px;
     text-align: center;
+    animation:slide-in-fwd-center 1s cubic-bezier(.55,.085,.68,.53) 1s both;
 }
-
-
+@keyframes slide-in-fwd-center{0%{transform:translateZ(-1400px);opacity:0}100%{transform:translateZ(0);opacity:1}}
 
 .contenido-nosotros{
     width: 85%;
@@ -287,6 +294,10 @@ label span{
     padding: 55px 25px;
     background-color: rgba(0, 0, 0, 0.275);
     border-radius: 10%;
+}
+.contenido-nosotros .articulo:hover{
+    background: rgb(15,15,31);
+    background: linear-gradient(90deg, rgba(15,15,31,1) 0%, rgba(138,138,175,1) 38%, rgba(18,18,18,1) 100%);
 }
 .contenido-nosotros .articulo h3{
     color: white;
@@ -376,11 +387,13 @@ label span{
     box-sizing: border-box;
     margin: 30px;
     overflow: hidden;
+    animation:rotate-in-diag-1 .8s cubic-bezier(.25,.46,.45,.94) 4s both;
 }
 .items:hover{
     border: 2px solid #FCA311;
     transition: .2s;
 }
+@keyframes rotate-in-diag-1{0%{transform:rotate3d(1,1,0,-360deg);opacity:0}100%{transform:rotate3d(1,1,0,0deg);opacity:1}}
 .items i{
     font-size: 50px;
     display: block;
