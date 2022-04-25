@@ -1,0 +1,359 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Montserrat', sans-serif;
+    
+}
+
+body{
+    background-color: #191919;
+}
+
+/* nav */
+.navbar{
+    background: #000;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+nav{
+    background: #000;
+    height: 80px;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+span{
+    color: #FCA311;
+}
+a.active,a:hover{
+    
+    color: #FCA311;
+    transition: .5s;
+    border-radius: 10px;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width: 1200px){
+    nav{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1016px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 911px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #323131;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #FCA311;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+/* nav fin */
+
+
+
+/* header */
+
+header {
+    width: 100%;
+    padding: 60px 45px;
+    background-color: #191919;
+    background-image: url(../img/noticiasfondo.png);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-header{
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text-header h1{
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 60px;
+}
+
+.text-header h3{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.text-header h4{
+    color: #000;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.text-header .btn{
+    text-decoration: none;
+    color: white;
+    background-color: #FCA311;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition:  .4s;;
+}
+.text-header .btn:hover{
+    color: white;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid #FCA311;
+    transition:  .4s;
+}
+
+
+@media screen and  (max-width: 1000px){
+    
+    .container-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 200px;
+        display: grid;
+        grid-template-columns:repeat(1,auto);
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+        justify-content: center;
+    }
+    header{
+        height: 80vh;
+    }
+}
+@media screen and (max-width: 405px){
+    
+.text-header h1{
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 40px;
+}
+
+.text-header h3{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.text-header h4{
+    color: #FCA311;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+label span{
+    display: none;
+}
+
+}
+@media screen and (max-width: 329px){
+    nav .logo {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 369px){
+    
+    .container-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 200px;
+        display: grid;
+        grid-template-columns:repeat(1,auto);
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+    }
+}
+
+/* header fin */
+
+/* menu  */
+.menu{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px,1fr));
+    grid-gap: 20px 40px;
+    margin-bottom: 10px;
+}
+.heading{
+    background-color: #191919;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding: 120px 0 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+}
+.heading>h1{
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+.heading>h3{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+.food-items{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(217, 221, 6, 0.1);
+    margin: 0 20px;
+    background-color: #FCA311;
+}
+.food-items img{
+    position: relative;
+    width: 80%;
+    border-radius: 15px 15px 0 0;
+    margin: 0 auto;
+}
+
+.details{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+.details-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.details-sub>h5{
+    font-weight: 600;
+    font-size: 18px;
+    color: black;
+}
+.price{
+    text-align: right;
+}
+.details>p{
+    color: #000;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
+}
+.details>button{
+    background-color: #000;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 20px;
+    width: 110px;
+    margin: 0 auto;
+}
+
+.details>button:hover{
+    background-color: transparent;
+    border: 2px solid #000;
+    color: #000;
+}
+/* menu fin */
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    background-color: #000;
+}
+
+footer p{
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+
+}
+footer .social {
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+}
+footer .social a{
+    font-size: 30px;
+    color: #FCA311;
+    margin: 22px 10px;
+    text-align: center;
+}
+
+footer .social a i:hover{
+    color: #7f11fc;
+    transform: scale(1.5,1.5);
+    transition: .3s;
+}
+
+/* footer fin*/
