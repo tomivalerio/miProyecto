@@ -1,0 +1,500 @@
+
+
+$Color1 : #FCA311;
+$Color2 : #000;
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+    span {
+        color: $Color1;
+    }
+}
+
+
+/* nav start */
+.navbar {
+    background-color: $Color2;
+    padding: 10px;
+    .nav-link{
+        margin-right: 20px;
+    }
+    .a1 {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: 18px;
+
+            &:hover{
+                color:  $Color1 !important;
+                transition: .4s;
+            }
+    }
+    .navbar-brand {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .btnnav {
+        background-color:  $Color1;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 5px 20px;
+        border-radius: 15px;
+        transition: .4s;
+        font-size: 15px;
+
+            &:hover{
+                transform: scale(1.1, 1.1);
+                background-color: transparent;
+                border: 2px solid  $Color1;
+            }
+    }
+}
+
+
+/* nav fin */
+
+/* header start */
+header {
+    background-image: url(./img/fondoindex.png);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text h4 {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        -webkit-animation: tracking-in-expand 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+        animation: tracking-in-expand 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+    }
+
+    .text h1 {
+        font-size: 70px;
+        color: white;
+        text-align: center;
+        webkit-animation: tracking-in-contract-bck 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-contract-bck 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+
+    
+    .text p {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        -webkit-animation: tracking-in-expand 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+        animation: tracking-in-expand 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+    }
+
+    .text-center {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .btn-header {
+        text-align: center;
+        background-color: $Color2;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+
+            &:hover{
+                background-color:  $Color1;
+                color: $Color2;
+                border: 2px solid $Color2;
+            }
+    }
+
+
+    @media (max-width: 355px) {
+        .text h1 {
+            font-size: 50px;
+        }
+    }
+    
+}
+@media screen and (max-height: 485px) {
+    header h4 {
+        display: none;
+    }
+    header .btn-header{
+        display: none;
+    }
+}
+
+@media screen and (max-height: 668px) {
+    header h4 {
+        display: none;
+    }
+    header .btn-header{
+        display: none;
+    }
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes tracking-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+
+
+body {
+    background-color: #191919;
+
+    .sn1 {
+        background-color: #191919 !important;
+        color: white;
+    }
+
+    h1{
+        margin-top: 25px;
+    }
+}
+
+
+/* header fin */
+
+/* nosotros start */
+.nosotros {
+    margin-bottom: 20px;
+    margin-top: 55px;
+
+    .text-nosot {
+        width: 100%;
+        margin: 0;
+
+        h4 {
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: 28px;
+        }
+    }
+    
+    
+    .imgcontent {
+        width: 60%;
+        padding: 20px;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+            border-radius: 20%;
+            -webkit-animation: rotate-hor-center 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) 1.7s both;
+            animation: rotate-hor-center 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) 1.7s both;
+        }
+    }
+
+    
+    .n1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .btnnos {
+        background-color: transparent;
+        color: white;
+        text-decoration: none;
+        border: 2px solid  $Color1;
+        font-weight: bold;
+        padding: 5px 20px;
+        border-radius: 15px;
+        transition: .4s;
+        font-size: 15px;
+
+            &:hover{
+                transform: scale(1.1, 1.1);
+                background-color:  $Color1;
+                border: 2px solid #0001;
+            }
+    }
+
+}
+
+
+
+@-webkit-keyframes rotate-hor-center {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+
+    100% {
+        -webkit-transform: rotateX(-360deg);
+        transform: rotateX(-360deg);
+    }
+}
+
+@keyframes rotate-hor-center {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+
+    100% {
+        -webkit-transform: rotateX(-360deg);
+        transform: rotateX(-360deg);
+    }
+}
+
+/* nosotros fin */
+
+
+
+/* banner start */
+
+
+/* declarando mapa */
+
+$fondo: (
+    color1: red,
+    color2: blue,
+    color3: coral
+);
+
+
+@each $color1,$baner in $fondo {
+    .ban--#{$color1}{
+        background-color: $baner;
+        color: white;
+        height: 98px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.banner {
+    background-color:  $Color1;
+    height: 98px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .row p {
+        
+        padding: 5px;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+}
+
+
+/* banner fin */
+
+/* cservicio start */
+
+
+.card {
+
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: $Color2;
+    color: white;
+    width: 19rem !important;
+
+        &:hover{
+            border: 2px solid  $Color1;
+            transition: 0.2s;
+        }
+    
+    i {
+        font-size: 50px;
+        display: block;
+        text-align: center;
+        margin: 25px 0px;
+        color:  $Color1;
+    }
+}
+
+
+    .textserv {
+        color: white;
+        margin-bottom: 30px;
+        margin-top: 25px;
+    }
+
+.carta {
+    margin-top: 50px;
+
+    .car3 {
+        margin: 10px 0px;
+    }
+}
+
+
+    .card {
+
+        h5{
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        p {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        .btnn {
+            border-radius: 20px;
+            background-color: #191919;
+            border: 2px solid  $Color1;
+
+            &:hover{
+                background-color: transparent;
+                border: 2px solid  $Color1;
+            }
+        }
+    }
+
+
+/* servicio fin */
+
+
+/* banner3 extend y mixin*/
+
+@mixin sizes ($font,$text,$border){
+    font-size: $font;
+    color: $text;
+    border:$border
+}
+
+
+.banner--nueva{
+    @extend .banner;
+    border: 2px solid $Color2;
+    @include sizes(20px,blue ,5px solid black )
+}
+/* banner3 extend */
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    background-color: $Color2;
+    margin-top: 20px;
+
+    p {
+        font-size: 18px;
+        color: white;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .social {
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+
+        a {
+            font-size: 30px;
+            color:  $Color1;
+            margin: 22px 10px;
+            text-align: center;
+        }
+
+        i {
+            &:hover{
+                color: #7f11fc;
+                transform: scale(1.5, 1.5);
+                transition: .3s;
+            }
+        }
+    }
+}
+
+/* footer fin*/
